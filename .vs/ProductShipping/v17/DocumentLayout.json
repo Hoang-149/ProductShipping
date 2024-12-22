@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Works\\C#\\ProductShipping\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|d:\\works\\c#\\productshipping\\productshipping\\services\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|solutionrelative:productshipping\\services\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|d:\\works\\c#\\productshipping\\productshipping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|solutionrelative:productshipping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|d:\\works\\c#\\productshipping\\productshipping\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|solutionrelative:productshipping\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|d:\\works\\c#\\productshipping\\productshipping\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|solutionrelative:productshipping\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|d:\\works\\c#\\productshipping\\productshipping\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3C7EECED-6B53-4FB5-AFC3-7E1704B25617}|ProductShipping\\ProductShipping.csproj|solutionrelative:productshipping\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 228,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Program.cs",
+              "RelativeDocumentMoniker": "ProductShipping\\Program.cs",
+              "ToolTip": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Program.cs",
+              "RelativeToolTip": "ProductShipping\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T13:44:05.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "ProductShipping\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "ProductShipping\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-22T13:36:00.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProductShipping\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ProductShipping\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-22T12:49:50.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "ProductShipping\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "ProductShipping\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T10:19:30.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PackageService.cs",
+              "DocumentMoniker": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Services\\PackageService.cs",
+              "RelativeDocumentMoniker": "ProductShipping\\Services\\PackageService.cs",
+              "ToolTip": "D:\\Works\\C#\\ProductShipping\\ProductShipping\\Services\\PackageService.cs",
+              "RelativeToolTip": "ProductShipping\\Services\\PackageService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T09:19:30.054Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
