@@ -5,6 +5,7 @@ namespace ProductShipping.Services
     public class PackageService
     {
         private readonly DBContext _dbcontext;
+        private const decimal MaxPackagePrice = 250m;
 
         public PackageService(DBContext db)
         {
@@ -13,36 +14,61 @@ namespace ProductShipping.Services
 
         public List<Package> SplitPackages(List<Product> products)
         {
-            var packages = new List<Package>();
-            var currentPackage = new Package();
+            var totalPrice = products.Sum(p => p.Price.GetValueOrDefault());
             var totalWeight = products.Sum(p => p.Weight.GetValueOrDefault());
-            var numberOfPackages = (int)Math.Ceiling(products.Sum(p => p.Price.GetValueOrDefault()) / 250);
-            var targetWeight = totalWeight / numberOfPackages;
 
-            foreach (var product in products.OrderByDescending(p => p.Price))
+            if (totalPrice <= MaxPackagePrice)
             {
-                if (currentPackage.TotalPrice + product.Price > 250 || currentPackage.TotalWeight + product.Weight > targetWeight)
-                {
-                    AddPackage(currentPackage, packages);
-                    currentPackage = new Package();
-                }
-                currentPackage.Items.Add(product);
-                currentPackage.TotalPrice += product.Price.GetValueOrDefault();
-                currentPackage.TotalWeight += product.Weight.GetValueOrDefault();
+                return new List<Package> { CreatePackage(products) };
             }
 
-            if (currentPackage.Items.Any())
+            int numberOfPackages = (int)Math.Ceiling(totalPrice / MaxPackagePrice);
+            return DistributeProducts(products, numberOfPackages);
+        }
+
+        private List<Package> DistributeProducts(List<Product> products, int numberOfPackages)
+        {
+            var packages = Enumerable.Range(0, numberOfPackages).Select(_ => new Package()).ToList();
+            var sortedProducts = products.OrderByDescending(p => p.Price * p.Weight).ToList();
+
+            foreach (var product in sortedProducts)
             {
-                AddPackage(currentPackage, packages);
+                var targetPackage = packages
+                    .Where(p => p.TotalPrice + product.Price <= MaxPackagePrice)
+                    .OrderBy(p => p.TotalWeight)
+                    .FirstOrDefault();
+
+                if (targetPackage == null)
+                {
+                    targetPackage = new Package();
+                    packages.Add(targetPackage);
+                }
+
+                targetPackage.Items.Add(product);
+                targetPackage.TotalPrice += product.Price.GetValueOrDefault();
+                targetPackage.TotalWeight += product.Weight.GetValueOrDefault();
+            }
+
+            packages.RemoveAll(p => !p.Items.Any());
+
+            foreach (var package in packages)
+            {
+                package.CourierPrice = GetCourierPrice(package.TotalWeight);
             }
 
             return packages;
         }
 
-        public void AddPackage(Package package, List<Package> packages)
+        private Package CreatePackage(List<Product> products)
         {
+            var package = new Package
+            {
+                Items = products,
+                TotalPrice = products.Sum(p => p.Price.GetValueOrDefault()),
+                TotalWeight = products.Sum(p => p.Weight.GetValueOrDefault())
+            };
             package.CourierPrice = GetCourierPrice(package.TotalWeight);
-            packages.Add(package);
+            return package;
         }
 
         public decimal GetCourierPrice(int weight)
@@ -52,3 +78,5 @@ namespace ProductShipping.Services
         }
     }
 }
+
+
